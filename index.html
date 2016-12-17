@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+<link rel="stylesheet" href="css/materialize.min.css">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>QUICK</title>
+</head>
+
+<body>
+ <div id="firstpage">
+<h1>QUICK!</h1>
+<a id="play" class="play material-icons">play_circle_outline</a>
+<p class="highs">Highscore:<span id="fronthigh"></span></p>
+</div>
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="color:black !important;">
+      <h4>Great round</h4>
+      <p>Your score was:<span id="modalscore"></span></p>
+      <p>Wanna play again?</p>
+    </div>
+    <div class="modal-footer">
+      <a id="playagain" class=" modal-action modal-close waves-effect waves-green btn-flat">Play</a>
+      <a href="#!" onclick="window.points = 0;$('#firstpage').css({'display':'block'});$('html, body').animate({ scrollTop: 0 }, 1000);setTimeout(function(){$('#gamewrap').css({'display':'none'})},1000)" class=" modal-action modal-close waves-effect waves-green left btn-flat">Get back</a>
+    </div>
+  </div>
+<div id="gamewrap" class="row">
+<div id="top" class="time"><span class="time"><span id="timeleft">0</span> <span class="material-icons" style="color:#45B5DA;">timer</span></span><span></span>   <span class="points"><span id="points">0</span></span>  <span class="right"><span id="highscore">0</span><span class="material-icons" style="color:#FFC870;">star</span></span> </div>
+      <div id="1" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();" class="col i s3"></div>
+      <div id="2" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();" class="col ii s3"></div>
+      <div id="3" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();" class="col iii s3"></div>
+      <div id="4" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();" class="col iiii s3"></div>
+
+
+      <div id="5" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col i s3"></div>
+      <div id="6" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col ii s3"></div>
+      <div id="7" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iii s3"></div>
+      <div id="8" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iiii s3"></div>
+ 
+      <div id="9"  onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col i s3"></div>
+      <div id="10" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col ii s3"></div>
+      <div id="11" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iii s3"></div>
+      <div id="12" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iiii s3"></div>
+
+      <div id="13" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col i s3"></div>
+      <div id="14" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col ii s3"></div>
+      <div id="15" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iii s3"></div>
+      <div id="16" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iiii s3"></div>
+      <div id="17" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col i s3"></div>
+      <div id="18" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col ii s3"></div>
+      <div id="19" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iii s3"></div>
+      <div id="20" onclick="if($(this).hasClass('z-depth-3 active')){window.points++}else{window.points--}random();"class="col iiii s3"></div>
+
+</div>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
